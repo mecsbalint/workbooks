@@ -277,7 +277,7 @@
     : Since access modifiers are more conventions than any other thing we can say the getters and setters are also mostly for conventional things rather than rules forced on developers. We can create setters and getters with regular methods, but we can use the `@property` decorator to create getters and `@property_name.setter` decorator to create setters. With them their methods will be called when we call the property and when we reassign it.
 
 
-## Decorators
+## Decorators✔
 * What are decorators in Python?
 
     : From a functional perspective decorators are functions which modify the functionality of other functions, or in other words decorator is a design pattern to achieve this goal. In a more tachnical one, a decorator is a higher order function that creates a new function using the one it has got as a parameter and returns this newly created one - so essentially it's a wrapper function creator function. Using decorators is a common way to add extra functionalities to custom function.
@@ -289,24 +289,69 @@
 
 * What happens when there are multiple decorators for a function?
 
-    : It is possible to apply multiple decorators on a single function. In this case it will works as though we wrapped the decorated function with the last decorator and wrapped this with the first one. In practice this means that the first decorator's code will run first before the decorated function and last after it.
+    : It is possible to apply multiple decorators on a single function. In this case it will work as though we wrapped the decorated function with the last decorator and wrapped this with the first one. In practice this means that the first decorator's code will run first before the decorated function and last after it.
 
-* How do you create a decorator that wait an argument?
+* How do you create a decorator with an argument?
 
-## Flask
+    : To create a decorator that can receive an argument upon calling, we need to define it as a wrapper function that defines and returns the "normal" decorator function (the one that receive the decorated function as parameter), and this function can have any type of parameters. This decorator function can be used with the `@` keyword as we mentioned earlier.
+
+
+## Flask✔
 * What is Flask?
+
+    : Flask is a slim Python web application framework. It's often called micro-framework because its core is a minimal framework with only the essentials, but it supports extensions which can cover these parts of a full fledged web framework. It uses the Werkzeug python utility library which is a toolset for the WSGI (Web Server Gateway Interface) which is a calling convention for python applications to forward requests.
+
 * What are the key features of Flask?
+
+    : 
+    1. Maybe Flask's most prominent key feature is its minimalistic design, providing only the essential tools and let the developer to build with the components they need.
+    2. Built-in development server for debuggind and quick testing, it provides a live developer server that reloads every time when the code is changed.
+    3. Jinja2 template engine for dynamically generating html pages which provides a native solution to create frontend pages in Python.
+    4. RESTful Request Dispatching: this means a mechanism by an app routes the incoming (HTTP) requests to the appropriate handlers based on the RESTful principles.
+
 * What is Flask-WTF?
+
+    : Flask-WTF is an integration library of Flask and WTForm so the latter (the library) can be used in the context of the former (the framework). WTForm itself is a form validation and rendering library for Python applications.
+
 * why do we use the `__name__` argument in Flask constructor?
+
+    : `__name__` is a built-in variable that serves as the name of the module in Python. Flask needs this as its first parameter so it knows what belongs to the application and can look for resources (e.g. static files or templates) from there.
+
 * What is Jinja Template Engine?
+
+    : Jinja is a template language engine for html code that has placeholders for Python-like code, so in a sense its role is similar to what lore JSX has in React. But Jinja is static, and it's considered a different template language rather than a language extension like JSX. So Jinja is for staticly rendered but somehow dynamic web pages where the dynamic part is written in Python-like syntax rather than JavaScript.
+
 * How do you create a route with Flask?
+
+    : Creating an endpoint for a route is quite simple in Flask, we can use the `@.route()` decorator on a function, where the name of the Flask instance should preceede the point in the decorator. This decorator's first parameter is always the path (the route) we want the endpoint to handle. Flask will forward the requests with this path to the route and call the function to handle them, and will create a response with the function's return value as its body and send it to the requester.
+
 * What does `url_for` do in Flask?
+
+    : The `url_for` method is to prepare an url for a function dynamically by passing this function as the first parameter of it. It's especially useful when we want to use an endpoint from another (e.g. redirecting a request) and we don't want to remember where that endpoint is used in the code in case we restructure the paths and rename the route for that endpoint. By using `url_for` it will always point forward the actual handler function.
+
 * How do you handle cookies in a Flask?
+
+    : Flask has built-in methods to set or get cookies. With the `set_cookie()` method of the Flask's response object we can set cookies for that response. To retrieve cookies from a request we can use the Flask's request object's cookies attribute which is a dictionary object that holds the cookies sent with the request to the server.
+
 * What is the use of `jsonify()` function in Flask?
+
+    : `jsonify()` is a built-in Flask function that converts Python dictionaries or lists into JSON response object. These response objects has the correct Content-Type attribute (application/json) and a proper HTTP status code (200), so this function can be used to easily create a response with a JSON object as its body.
+
 * How do you create a Session in Flask?
+
+    : In Flask a session is created automatically when the handler function set a value for the Flask's built-in session object. This session will be open until the client's browser is closed or when the handler function clears the session object. If the Flask is set o have permanent sessions then a session won't close when the browser closes but rather it will close when it expires.
+
 * What are application context and request context in Flask?
+
+    : The application context is the context that holds the set up of the Flask application which currently run. It can be reached via the `current_app` proxy because in some cases the current instance of the application cannot be imported directly. The request context has a similar role but for the actual request. It exists during the rewuest itself and the data on the request can be reached through it.
+
 * Describe the Flask-JWT, Flask-SQLAlchemy and Flask-Bcrypt extensions!
-* How do you handle errors in Flask?
+
+    : While Flask is a lightweight framework it has a lot of extensions we can use to expand its functionality, for example these extensions:
+    1. Flask-JWT is an extension for autentication and authorization functionality with JSON Web Tokens.
+    2. Flask-SQLAlchemy is an extension that provides an interface to use SQLAlchemy, the most poplar ORM for Python in a Flask application.
+    3. Flask-Bcrypt is an extension for password hashing and verification functionality for Flask applications.
+
 
 ## Pandas
 * What is Pandas?
