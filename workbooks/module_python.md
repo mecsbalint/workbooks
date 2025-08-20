@@ -353,17 +353,54 @@
     3. Flask-Bcrypt is an extension for password hashing and verification functionality for Flask applications.
 
 
-## Pandas
+## Pandas✔
 * What is Pandas?
+
+    : Pandas is an open-source library for Python for data manipulation and analysis first released in 2008. Its name is derived from the term "panel data". It's built on NumPy, another Python library for mathematical operations on large multi-dimensional arrays.
+
 * What are the key features of Pandas?
+
+    : Pandas has several features but its key functionalities are these:
+    1. Data cleaning: Pandas has various functions to clean data we want to work with, for example fill or drop missing data or search for duplications.
+    2. Data selection: Pandas allows for a range of fine filtering and selection functions e.g. `.loc()` or `.apply()` which help to filter and select data.
+    3. Data aggregation: Pandas has a robust body of aggregator functions from the simple ones like `.sum()` or `.max()` to the grouping functions and the `.agg()` function that execute a custom aggregation function on the data.
+    4. Data visualization: Pandas integrates with the popular data visualization library, Matplotlib.
+    5. I/O operations: Pandas supports I/O operations on several popular file format e.g. csv, excel or JSON.
+
 * Describe the `Series` and `DataFrame` Pandas data structures!
+
+    : Pandas has two main data type. `Series` is a one-dimensional labeled array with homogenous data. `DataFrame` is a two-dimensional data structure with heterogeneous data by its columns (in a column the data is still homogeneous), so it works as a relational data structure. It's important to note that a column of a `DataFrame` is also a `Series`. In pandas there is a lot of function those have implementations for both data types and works differently (e.g. most of the aggregations works on `DataFrame` and will be applied to every columns one by one).
+
 * How do you retrieve metadata of a `DataFrame`?
+
+    : You can use the `.info()` instance method of `DataFrame` to get metadata of a `DataFrame` which will show the number of rows of it along with its columns with their attributes.
+
 * How do you handle missing data in Pandas?
+
+    : In Pandas there are built-in functions to handle missing data. We can use `.isnull()` method to find missing values, `.dropna()` to drop cells with missing values or `.fillna()` to fill these cells with some data (it can be an aggregation of the column's complete data).
+
 * How do you filter rows in a `DataFrame`?
-* Explain the `groupby()` function in Pandas!
+
+    : There are two common ways to filter data in a `DataFrame`:
+    1. Boolean indexing: we can set a condition between square brackets after a `DataFrame` and it will return a filtered version of it. We can set multiple conditions combining them with the `&` keyword.
+    2. `.query()` function: with it we can query the `DataFrame` allowing for more complex filtering.
+
+* Explain the `groupby()` function in Pandas.
+
+    : `groupby()` function returns a pandas groupby object with groups based on the argument we added to the function (e.g. one column of the `DataFrame`). This object acts like a `DataFrame` in many cases but not always. When we call an aggregator function on a groupby object it will be executed on every group.
+
 * What are common file formats Pandas can read from or write to and what built-in functions should we use?
+
+    : We can use built-in functions to read csv (`.read_csv()`), excel (`.read_excel()`), SQL (`.read_sql()`) and JSON (`.read_json()`) and other functions to write csv (`.to_csv()`) and excel (`.to_excel()`).
+
 * What are the `.apply()` and `.applymap()` functions in Pandas?
+
+    : `.apply()` function allows applying a function to all elements of a `Series` or all rows/columns of a `DataFrame`. `.applymap()` function is for only `DataFrames` and allows applying  function to all cell of it.
+
 * How can you handle duplicate data in Pandas?
+
+    : We can search for duplicate data with the `.duplicate()` method which returns a `Series` of `bool` values based on if an element (in case of a `Series`) or a row (in case of a `DataFrame`) is a duplicate or not. With this combining some filter methods we can filter out duplicates easily.
+
 
 ## Seaborn
 
