@@ -7,6 +7,10 @@
 
     : Python is a high-level, interpreted, dynamically type-checked and garbage-collected language created in the 1980s by Guido van Rossum (the first release was in 1991). Python is a multi-paradigm language that supports OOP or procedural programming. It is one of the most popular languages and it's used mainly for data science, data analysis, machine learning and other fields.
 
+* What is PEP8?
+
+    : PEP8 is the 8th element or part of the Python Enchancement Proposals, and is a guide for Python coding conventions a programmer should follow when writing in Python, however they are not hard rules. It has recommendations for variable naming, code layout, comment styling etc. It was created by Guido van Rossum among others.
+
 * What are the key features of Python?
 
     : There are several features of Python:
