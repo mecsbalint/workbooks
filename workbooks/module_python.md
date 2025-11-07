@@ -43,7 +43,7 @@
 
 * What is the purpose of `__init__.py` in a Python package?
 
-    : `__init__.py` file is a declaration file that indicates that the directory is a regular python package and can be imported. It is usually an empty file but it will be executed upon the first import of the package, so if necessary we can put some code in it (e.g. it can import some other modules the package needs). It's important to mention that since Python 3.3 the `__init__.py` is optional as the interpreter can recognize python packages without it.
+    : `__init__.py` file is a declaration file that indicates that the directory is a regular python package and can be imported. It is usually an empty file but it will be executed upon the first import of the package, so if necessary we can put some code in it (e.g. it can import some other modules the package needs). It's important to mention that since Python 3.3 the `__init__.py` is optional as the interpreter can recognize python packages without it as namespace packages. For regular packages `__init__.py` is still necessary.
 
 * How do you handle exceptions in Python?
 
@@ -87,7 +87,7 @@
 
 * What is the difference between `is` and `==` in Python?
 
-    : In Python `is` is an identity operator and checks if the two variables of its sides are pointed to the exact same object. The `==` equality operator on the other hand checks the values of the objects and returns a `bool` accordingly.
+    : In Python `is` is an identity operator and checks if the two variables of its sides are pointed to the exact same object. The `==` equality operator on the other hand checks the values of the objects and returns a `bool` accordingly. In a more technical way the equality operator will call the `__eq__()` dunder function on the element on the left with the element on the right as an argument.
 
 * What is `None` in Python?
     
@@ -157,7 +157,7 @@
     : `dir()` function returns a list of the names of the object's properties and methods without their values. It helps inspect objects, modules and functions.
 
 
-## Functions and Scopes in Python✔
+## Functions and Scopes in Python
 
 * What are the scopes in Python and how do they work?
 
@@ -229,6 +229,8 @@
     1. `map()` returns a special iterator object with the return values of the executions of the lamdba expression it has got as argument.
     2. `filter()` returns a special iterator object with the element those case the lambda expression's returned `True` (or a truthy value).
     3. `reduce()` returns an aggregation of the elements of an iterable, the aggregation itself is specified by the lambda function (which gets two argument, the accumulator and the element).
+
+* What are function annotations in Python?
 
 
 ## OOP in Python✔
@@ -406,11 +408,20 @@
     : We can search for duplicate data with the `.duplicate()` method which returns a `Series` of `bool` values based on if an element (in case of a `Series`) or a row (in case of a `DataFrame`) is a duplicate or not. With this combining some filter methods we can filter out duplicates easily.
 
 
-## Seaborn
-
 ## Testing
 * What are Python assertions?
 * What are pytest and unittest?
 
 ## SQL and Python
 * What is SQLAlchemy?
+
+## Seaborn
+
+## C and Python
+* How do you create a C extension module manually?
+* What is Python C API?
+* What are the mandatory parts of a C extension module?
+* How can you parse and use python objects in a C extension module?
+* How can you use pandas objects in a C extension module? What is the difference between pandas and normal python objects?
+* How can Python Interpreter use a C extension module?
+* What is Cython?
