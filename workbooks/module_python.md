@@ -233,7 +233,7 @@
 * What are function annotations in Python?
 
 
-## OOP in Python✔
+## OOP in Python
 * How do you define a class in Python?
 
     : You can define a class with the `class` keyword in Python.
@@ -414,9 +414,6 @@
 ## Testing
 * What are Python assertions?
 * What are pytest and unittest?
-
-## SQL and Python
-* What is SQLAlchemy?
 
 ## Seaborn
 
