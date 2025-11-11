@@ -282,6 +282,9 @@
 
     : Since access modifiers are more conventions than any other thing we can say the getters and setters are also mostly for conventional things rather than rules forced on developers. We can create setters and getters with regular methods, but we can use the `@property` decorator to create getters and `@property_name.setter` decorator to create setters. With them their methods will be called when we call the property and when we reassign it.
 
+* What is an informal and formal interfaces in Python?
+* How do you create a formal interface?
+
 
 ## Decorators✔
 * What are decorators in Python?
@@ -425,3 +428,4 @@
 * How can you use pandas objects in a C extension module? What is the difference between pandas and normal python objects?
 * How can Python Interpreter use a C extension module?
 * What is Cython?
+* How do you do static typing in Cython? Why is it important?
