@@ -157,9 +157,9 @@
     : `dir()` function returns a list of the names of the object's properties and methods without their values. It helps inspect objects, modules and functions.
 
 
-## Functions and Scopes in Python
+## Functions and Scopes in Python✔
 
-* What are the scopes in Python and how do they work?
+* What scopes are there in Python and how do they work?
 
     : Scope in programming the scope of a name (variable) defines the region of a program where the code can access it. In Python there is global and local scopes. The former means that the name is accessible from everywhere with no restrictions, while the latter means it's accessible from its own scope. A scope can be the body function or lambda expression. A name is accessible from other scopes if they are nested into the name's scope.
 
@@ -230,10 +230,12 @@
     2. `filter()` returns a special iterator object with the element those case the lambda expression's returned `True` (or a truthy value).
     3. `reduce()` returns an aggregation of the elements of an iterable, the aggregation itself is specified by the lambda function (which gets two argument, the accumulator and the element).
 
-* What are function annotations in Python?
+* What is function annotation in Python?
+
+    : In Python function annotation is a way to attach type information to function parameters and return values. They are part of the fucntion signature and can provide information on the type of the argument or return value to type checking tools like Pylance or IDEs like VS Code.
 
 
-## OOP in Python
+## OOP in Python✔
 * How do you define a class in Python?
 
     : You can define a class with the `class` keyword in Python.
@@ -282,9 +284,17 @@
 
     : Since access modifiers are more conventions than any other thing we can say the getters and setters are also mostly for conventional things rather than rules forced on developers. We can create setters and getters with regular methods, but we can use the `@property` decorator to create getters and `@property_name.setter` decorator to create setters. With them their methods will be called when we call the property and when we reassign it.
 
-* What is an informal and formal interfaces in Python?
-* How do you create a formal interface?
+* What is a metaclass? How do you define a custom one?
 
+    : In Python every class is an instance of a class, and we call these classes which have class instances metaclass. For example type is a metaclass and it will be a custom defined class' metaclass by default. To define a custom metaclass we need it to inherit from a metaclass and it should implement the `__new__()` method which is responsible to instanciate a metaclass i.e. create a class.
+
+* How do you define a class with a specific metaclass?
+
+    : To define a class with a specific metaclass we can use the metaclass keyword argument during class declaration.
+
+* How do you define and use interfaces in Python?
+
+    : In Python there are no interfaces as distinct language elements like in Java there are. However, since there is multiple inheritance in Python we can use an abstract class that has only abstract method members as interface. Because of multiple inheritance this way a class can have multiple interface-like abstract classes along wiht one or more normal superclass.
 
 ## Decorators✔
 * What are decorators in Python?
@@ -411,14 +421,8 @@
     : We can search for duplicate data with the `.duplicate()` method which returns a `Series` of `bool` values based on if an element (in case of a `Series`) or a row (in case of a `DataFrame`) is a duplicate or not. With this combining some filter methods we can filter out duplicates easily.
 
 
-## Testing
-* What are Python assertions?
-* What are pytest and unittest?
-
-## Seaborn
 
 ## C and Python
-* How do you create a C extension module manually?
 * What is Python C API?
 * What are the mandatory parts of a C extension module?
 * How can you parse and use python objects in a C extension module?
@@ -426,3 +430,12 @@
 * How can Python Interpreter use a C extension module?
 * What is Cython?
 * How do you do static typing in Cython? Why is it important?
+* What is the difference between `cdef` and `cpdef` in function declaration?
+* How do you call C functions in a cython code?
+
+## Testing
+* What are Python assertions?
+* What are pytest and unittest?
+* What is timeit module? How can we use it for testing?
+
+## Seaborn
