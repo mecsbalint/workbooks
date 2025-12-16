@@ -37,7 +37,7 @@
 
     : To create a Python module you need only a file with th `.py` extension and some legit Python code as content. To use it you can use the `import` statement. With it you can import the whole module or only elemnts of it (like variables or functions).
 
-* What is the if `__name__ == "__main__"` statement used for?
+* What is the `if __name__ == "__main__"` statement used for?
 
     : When we importing a module in Python the program will execute the imported module. Because of this, if there is anything that isn't a declaration in the imported module we should put in an if statement's true branch where the condition is `__name__ == "__main__"`. This condition will be only true when we directly run the said module.
 
@@ -95,7 +95,7 @@
 
 * What is the difference between mutable and immutable types in Python?
 
-    : Immutable types in Python means the value objects belonging to these types cannot be modified. Most of them are the non-collection data types like numbers or booleans, string or bytes but some of the collection data types are also immutable like the tuple . The other collection data types are mutable which means their data objects can be modified.
+    : Immutable types in Python means the value objects belonging to these types cannot be modified. Most of them are the non-collection data types like numbers or booleans, string or bytes but some of the collection data types are also immutable like the tuple. The other collection data types are mutable which means their data objects can be modified.
 
 * What are Python’s built-in data types?
 
@@ -421,6 +421,7 @@
     : We can search for duplicate data with the `.duplicate()` method which returns a `Series` of `bool` values based on if an element (in case of a `Series`) or a row (in case of a `DataFrame`) is a duplicate or not. With this combining some filter methods we can filter out duplicates easily.
 
 
+## Seaborn
 
 ## C and Python
 * What is Python C API?
@@ -437,5 +438,3 @@
 * What are Python assertions?
 * What are pytest and unittest?
 * What is timeit module? How can we use it for testing?
-
-## Seaborn
