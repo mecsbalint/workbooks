@@ -423,7 +423,9 @@
 
 ## Seaborn
 
-## C and Python
+## Websocket and Socket.io in Python
+
+## C and Cython with Python
 * What is Python C API?
 * What are the mandatory parts of a C extension module?
 * How can you parse and use python objects in a C extension module?

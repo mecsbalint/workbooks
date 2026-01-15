@@ -149,7 +149,7 @@
 
 - What does the `final` keyword mean in Java?
 
-    : Final keyword can be used for variables, methods or classes - these are different contextes but they are similar in the sense that this keyword is to make the element impossible to change. A final variable can't be reassigned (although its value still can be modified in case of reference types); a final method can't be overriden; and a final class can't be a superclass. A final variable has to be initialized during the declaration or by the class' constructor.
+    : Final keyword can be used for variables, methods or classes - these are different contexts but they are similar in the sense that this keyword is to make the element impossible to change. A final variable can't be reassigned (although its value still can be modified in case of reference types); a final method can't be overriden; and a final class can't be a superclass. A final variable has to be initialized during the declaration or by the class' constructor.
 
 - What does the `abstract` keyword mean in Java?
 
