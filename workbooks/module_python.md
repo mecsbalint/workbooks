@@ -421,22 +421,41 @@
     : We can search for duplicate data with the `.duplicate()` method which returns a `Series` of `bool` values based on if an element (in case of a `Series`) or a row (in case of a `DataFrame`) is a duplicate or not. With this combining some filter methods we can filter out duplicates easily.
 
 
-## Seaborn
-
 ## Websocket and Socket.io in Python
+* What is WebSocket, how does it differ from HTTP?
+* What is some common use case for WebSocket?
+* How does the WebSocket handshake work?
+* What is the difference between WebSocket and SSE (Server Sent Events)?
+* What are the ping/pong frames in WebSocket?
+* What fallback mechanisms can be used instead of WebSocket if it isn't work?
+* What is Socket.io?
+* What are the key features of Socket.io?
+* What is a socket id in Socket.io?
+* How do you send a message to a specific client in Socket.io?
+* How do you define an event handler in Socket.io?
+* What are rooms in Socket.io, and how do you use them?
+* What is `socket.broadcast.emit()` and when should it be used?
 
-## C and Cython with Python
+## C with Python
+* What is CPython and its Foreign Function Interface (FFI)?
 * What is Python C API?
+* What are the advantages of writing modules in C which can be used in Python code afterwards?
 * What are the mandatory parts of a C extension module?
 * How can you parse and use python objects in a C extension module?
-* How can you use pandas objects in a C extension module? What is the difference between pandas and normal python objects?
+* How can you use pandas objects in a C extension module? What is the difference between pandas and 'normal' python objects?
 * How can Python Interpreter use a C extension module?
+* What are the pitfalls of using Python C API?
+
+## Cython
 * What is Cython?
+* What are the syntax variants for Cython? How do you use them, what are the advantages and disadvantages of them?
 * How do you do static typing in Cython? Why is it important?
 * What is the difference between `cdef` and `cpdef` in function declaration?
 * How do you call C functions in a cython code?
 
+## Seaborn
+
 ## Testing
 * What are Python assertions?
-* What are pytest and unittest?
+* What is pytest and unittest?
 * What is timeit module? How can we use it for testing?
