@@ -1,15 +1,19 @@
 
 # Python
 
-## Python Introduction
+## Python Introduction✔
 
 * What is Python?
 
     : Python is a high-level, interpreted, dynamically type-checked and garbage-collected language created in the 1980s by Guido van Rossum (the first release was in 1991). Python is a multi-paradigm language that supports OOP or procedural programming. It is one of the most popular languages and it's used mainly for data science, data analysis, machine learning and other fields.
 
-* What is CPython?
+* What is `CPython`?
 
-* What other reference implementations of Python are there?
+    : `CPython` is the original, most popular and maintained implementation of the Python language which works both as a compiler and as an interpreter since it compiles Python to bytecode before interpreting it. It is written in C and Python, and it has some distinct feature like the GIL or the FFI (see below). Usually (and in this workbook) when we talk about Python's implementation details such as how it is executed we talk about the `CPython` implementation.
+
+* What are some of the other implementations of Python?
+
+    : Python has quite a few "production-quality" implementations. `Jython` is written in Java and compiles Python to Java bytecode hence it can be run on Java Virtual Machine afterwards, and it can use any Java classes. `PyPy` is written in `RPython` and translates Python code to `C`. `IronPython` is written entirely in `C#` and allows to use `.NET` libraries and frameworks in the `Python` code.
 
 * What is PEP8?
 
