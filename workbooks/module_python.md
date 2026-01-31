@@ -1,11 +1,15 @@
 
 # Python
 
-## Python Introduction✔
+## Python Introduction
 
 * What is Python?
 
     : Python is a high-level, interpreted, dynamically type-checked and garbage-collected language created in the 1980s by Guido van Rossum (the first release was in 1991). Python is a multi-paradigm language that supports OOP or procedural programming. It is one of the most popular languages and it's used mainly for data science, data analysis, machine learning and other fields.
+
+* What is CPython?
+
+* What other reference implementations of Python are there?
 
 * What is PEP8?
 
@@ -437,7 +441,7 @@
 * What is `socket.broadcast.emit()` and when should it be used?
 
 ## C with Python
-* What is CPython and its Foreign Function Interface (FFI)?
+* What is CPython's Foreign Function Interface (FFI)?
 * What is Python C API?
 * What are the advantages of writing modules in C which can be used in Python code afterwards?
 * What are the mandatory parts of a C extension module?
