@@ -455,7 +455,7 @@
 
     : An SSE is a server-push technology which enable the server to push updates to a client via HTTP connection. It's unidirectional (only the server can send messages to the client), persistent connection and if the connection drops the client (browser) automatically tries to reconnect. And the WebSocket is a bidirectional protocol for two-way communication between server and client and uses HTTP only for the initial handshake.
 
-* What fallback mechanisms can be used instead of WebSocket if it isn't work?
+* What fallback mechanisms can be used instead of WebSocket?
 
     : The most simple alternative to WebSocket is polling, which means the client sends HTTP requests in regular intervals to check if there is new information the server should send to it; if there is then the server can include it in the response. It requires a lot of HTTP connection to establish. Long polling also uses HTTP protocol, but in this case the server holds back the response until there isn't new information it wants to send to the client. Upon receiving a response the client send another request. Another alternative is using HTTP for client-initiated communication and SSE for server-initiated data sharing at the same time, this is what ChatGPT uses to stream text and receive prompt from the client at the same time.
 
