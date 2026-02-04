@@ -292,10 +292,6 @@
 
     : Since access modifiers are more conventions than any other thing we can say the getters and setters are also mostly for conventional things rather than rules forced on developers. We can create setters and getters with regular methods, but we can use the `@property` decorator to create getters and `@property_name.setter` decorator to create setters. With them their methods will be called when we call the property and when we reassign it.
 
-* What is a metaclass? How do you define a custom one?
-
-    : In Python every class is an instance of a class, and we call these classes which have class instances metaclass. For example type is a metaclass and it will be a custom defined class' metaclass by default. To define a custom metaclass we need it to inherit from a metaclass and it should implement the `__new__()` method which is responsible to instanciate a metaclass i.e. create a class.
-
 * How do you define a class with a specific metaclass?
 
     : To define a class with a specific metaclass we can use the metaclass keyword argument during class declaration.
